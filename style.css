@@ -70,7 +70,20 @@ header {
     background-color: #f1f1f1;
     padding: 20px;
   }
+
   
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+  
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
 
 @keyframes typing{
   0%{ width: 0ch} /*Text is hidden*/
