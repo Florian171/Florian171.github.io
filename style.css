@@ -102,7 +102,7 @@ body {
     margin: 0;
     font-size: 150px;
     color: rgba(255, 255, 255, 0.01);
-    background-image: url("https://images.wallpapersden.com/image/download/artistic-4k-pattern_a25lZ2yUmZqaraWkpJRobWllrWdma2U.jpg");
+    background-image: url("img/bgText.jpg");
     background-repeat: repeat;
     -webkit-background-clip:text;
     animation: animate 65s ease-in-out infinite;
