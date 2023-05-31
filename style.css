@@ -5,15 +5,32 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
+  
+/* Header/logo Title */
 header {
   width: 100%;
   height: 100vh;
+  padding: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
 
+
+.row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
 
 @keyframes typing{
   0%{ width: 0ch} /*Text is hidden*/
@@ -22,49 +39,7 @@ header {
   90%{ width: 0ch;} /*Text is deleted*/
   100%{ width: 0ch;} /*Text stays hidden*/
 }
-  
-  
-  .flex-container {
-    border-radius: 3px;
-    display: flex;
-    flex-wrap:inherit;
-    font-size: 30px;
-    text-align:inherit;
-    align-items: stretch;
-    gap: 10px;
-  gap: 10px 20px; /* row-gap column gap */
-  row-gap: 10px;
-  column-gap: 20px;
-
-  }
-
-  
-  .flex-item-left {
-    flex-basis: auto;
-    background-color: #252525;
-    color: whitesmoke;
-    padding: 10px;
-    flex: 50%;
-    align-self: left;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    text-align: center;
-    
-  }
-
-  .flex-item-right {
-      
-    background-color: rgb(113, 103, 255);
-    padding: 10px;
-    flex: 50%;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    margin:auto;
-    width: 50%;
-    padding: 10px;
-  
-}
-
+  /* Responsive layout - makes a one column-layout instead of a two-column layout */
   @media (max-width: 100px) {
     .flex-item-right, .flex-item-left {
       flex: 100%;
@@ -90,27 +65,8 @@ body {
     background-color: rgb(61, 61, 61);
   }
   
-  .text-container {
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
   
-  .text-container h1{
-    margin: 0;
-    font-size: 150px;
-    color: rgba(255, 255, 255, 0.01);
-    background-image: url("img/bgText.jpg");
-    background-repeat: repeat;
-    -webkit-background-clip:text;
-    animation: animate 65s ease-in-out infinite;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 900;
-  }
-  
+
     @keyframes animate {
       0%, 100% {
         background-position: left top;
