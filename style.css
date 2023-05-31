@@ -7,14 +7,11 @@
 
   
 /* Header/logo Title */
-header {
-  width: 100%;
-  height: 100vh;
+.header {
   padding: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
+  text-align: center;
+  background: #343434;
+  color: white;
 }
 
 .text-container {
@@ -98,6 +95,12 @@ header {
       flex: 100%;
     }
   }
+  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
 
   .footer {
     position:fixed;
@@ -117,10 +120,8 @@ body {
     font-family: 'Raleway', sans-serif;
     background-color: rgb(61, 61, 61);
   }
-  
-  
 
-    @keyframes animate {
+  @keyframes animate {
       0%, 100% {
         background-position: left top;
       }
