@@ -52,6 +52,19 @@ header {
     
   }
 
+  .flex-item-right {
+      
+    background-color: rgb(113, 103, 255);
+    padding: 10px;
+    flex: 50%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin:auto;
+    width: 50%;
+    padding: 10px;
+  
+}
+
   @media (max-width: 100px) {
     .flex-item-right, .flex-item-left {
       flex: 100%;
