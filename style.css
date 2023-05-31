@@ -24,7 +24,7 @@
 
 .text-container h1{
   margin: 0;
-  font-size: 150vw;
+  font-size:10vw;
   color: rgba(255, 255, 255, 0.01);
   background-image: url("img/bgText.jpg");
   background-repeat: repeat;
