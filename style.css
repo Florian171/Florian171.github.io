@@ -24,7 +24,7 @@
 
 .text-container h1{
   margin: 0;
-  font-size:10vw;
+  font-size:9vw;
   color: rgba(255, 255, 255, 0.01);
   background-image: url("img/bgText.jpg");
   background-repeat: repeat;
@@ -109,7 +109,7 @@
     width: 100%;
     color: rgb(0, 0, 0);
     text-align: center;
-    font-size: 11px;
+    font-size: 9px;
     background: rgb(255, 255, 255);
 }
 
