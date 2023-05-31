@@ -27,7 +27,7 @@ header {
 
 .text-container h1{
   margin: 0;
-  font-size: 150px;
+  font-size:larger;
   color: rgba(255, 255, 255, 0.01);
   background-image: url("img/bgText.jpg");
   background-repeat: repeat;
