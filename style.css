@@ -1,0 +1,114 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+header {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+
+@keyframes typing{
+  0%{ width: 0ch} /*Text is hidden*/
+  30%{ width: 16ch;} /*The enitre header will be typed out*/
+  80%{ width: 16ch;} /*Text stays visible*/
+  90%{ width: 0ch;} /*Text is deleted*/
+  100%{ width: 0ch;} /*Text stays hidden*/
+}
+  
+  
+  .flex-container {
+    border-radius: 3px;
+    display: flex;
+    flex-wrap:inherit;
+    font-size: 30px;
+    text-align:inherit;
+    align-items: stretch;
+    gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+
+  }
+
+  
+  .flex-item-left {
+    flex-basis: auto;
+    background-color: #252525;
+    color: whitesmoke;
+    padding: 10px;
+    flex: 50%;
+    align-self: left;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+    
+  }
+
+  @media (max-width: 100px) {
+    .flex-item-right, .flex-item-left {
+      flex: 100%;
+    }
+  }
+
+  .footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 11px;
+    background: rgb(255, 255, 255);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(61, 61, 61);
+  }
+  
+  .text-container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text-container h1{
+    margin: 0;
+    font-size: 150px;
+    color: rgba(255, 255, 255, 0.01);
+    background-image: url("https://cdn.domestika.org/c_limit,dpr_auto,f_auto,q_auto,w_820/v1403610461/content-items/000/613/550/icon_coloreados-original.png?1403610461");
+    background-repeat: repeat;
+    -webkit-background-clip:text;
+    animation: animate 15s ease-in-out infinite;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  
+    @keyframes animate {
+      0%, 100% {
+        background-position: left top;
+      }
+      25%{
+        background-position: right bottom;
+       }
+      50% {
+        background-position: left bottom;
+      }
+      75% {
+        background-position: right top;
+      }   
+  }
