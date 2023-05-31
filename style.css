@@ -17,6 +17,27 @@ header {
   margin: 0;
 }
 
+.text-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container h1{
+  margin: 0;
+  font-size: 150px;
+  color: rgba(255, 255, 255, 0.01);
+  background-image: url("img/bgText.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip:text;
+  animation: animate 65s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
 /* Style the top navigation bar */
 .navbar {
     display: flex;
@@ -36,7 +57,6 @@ header {
     background-color: #ddd;
     color: black;
   }
-
 
 .row {  
     display: flex;
