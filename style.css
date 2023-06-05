@@ -29,7 +29,46 @@ justify-content: center;
 align-items: center;
 }
 
-img {max-width:75%;}
+img {
+  max-width: 70%;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+
+  --b: 8px;  /* border thickness*/
+  --s: 60px; /* size of the corner*/
+  --g: 14px; /* the gap*/
+  --c: #9a51ed; 
+  
+  padding: calc(var(--b) + var(--g));
+  background-image:
+    conic-gradient(from  90deg at top    var(--b) left  var(--b),#0000 25%,var(--c) 0),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b),#0000 25%,var(--c) 0);
+  background-position:
+    var(--_p,0%) var(--_p,0%),
+    calc(100% - var(--_p,0%)) calc(100% - var(--_p,0%));
+  background-size: var(--s) var(--s);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: 
+    background-position .3s var(--_i,.3s), 
+    background-size .3s calc(.3s - var(--_i,.3s));
+}
+img.alt {
+  background-image:
+    conic-gradient(from 180deg at top    var(--b) right var(--b),#0000 25%,var(--c) 0),
+    conic-gradient(from   0deg at bottom var(--b) left  var(--b),#0000 25%,var(--c) 0);
+  background-position:
+    calc(100% - var(--_p,0%)) var(--_p,0%),
+    var(--_p,0%) calc(100% - var(--_p,0%));
+}
+img:hover {
+  background-size: calc(100% - var(--g)) calc(100% - var(--g));
+  --_p: calc(var(--g)/2);
+  --_i: 0s;
+  
+  filter: none;
+  -webkit-filter: grayscale(0);
+}
 
 .text-container h1{
 margin: 0;
@@ -167,6 +206,7 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   padding: 30px;
+  box-shadow: rgba(61, 61, 61, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -177,6 +217,7 @@ a:hover {
   border-top-left-radius: 30px;
   color: rgb(183, 183, 183);
   padding: 100px;
+  box-shadow: rgba(255, 255, 255, 0.4) -5px 5px, rgba(189, 189, 189, 0.3) -10px 10px, rgba(139, 139, 139, 0.2) -15px 15px, rgba(77, 77, 77, 0.1) -20px 20px, rgba(82, 82, 82, 0.05) -25px 25px;
 }
 
 
@@ -185,8 +226,10 @@ a:hover {
 border-top-right-radius: 30px;
   flex: 70%;
 background-color:#d8d8d8;
-color: rgb(0, 0, 0);
+color: rgb(24, 24, 24);
 padding: 60px;
+
+box-shadow: 8px 8px 0px #000000;
 }
 
 @keyframes typing{
@@ -207,7 +250,10 @@ padding: 60px;
 .row, .navbar {   
   flex-direction: column;
 }
+
 }
+
+
 
 .footer {
   
@@ -223,6 +269,9 @@ padding: 60px;
   background: rgb(24, 24, 24);
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+
+  box-shadow: rgba(255, 255, 255, 0.4) -5px 5px, rgba(189, 189, 189, 0.3) -10px 10px, rgba(139, 139, 139, 0.2) -15px 15px, rgba(77, 77, 77, 0.1) -20px 20px, rgba(82, 82, 82, 0.05) -25px 25px;
+
 }
 
 
