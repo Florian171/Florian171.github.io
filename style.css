@@ -166,7 +166,7 @@ a:hover {
 .row {  
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 30px;
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -176,7 +176,7 @@ a:hover {
   background-color: #323232;
   border-top-left-radius: 30px;
   color: rgb(183, 183, 183);
-  padding: 60px;
+  padding: 100px;
 }
 
 
@@ -251,7 +251,7 @@ body {
 
 .nav {
   width: 95vw;
-  height:10dvh;
+  height:10vh;
   display:flex;
   background:#2c2c2c;
   border-radius: 15px;
