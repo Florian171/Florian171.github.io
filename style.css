@@ -14,6 +14,10 @@ background: #343434;
 color: white;
 }
 
+.p {
+  text-align: justify;
+}
+
 body {
 display: grid;
 place-items: center;
@@ -74,6 +78,7 @@ img:hover {
 input[type=checkbox] {
   display: none;
 }
+
 
 
 input[type=checkbox]:checked ~ label > img {
