@@ -156,6 +156,7 @@ a:hover {
 .side {
   flex: 30%;
   background-color: #323232;
+  border-radius: 30px;
   color: rgb(183, 183, 183);
   padding: 20px;
 }
@@ -163,7 +164,8 @@ a:hover {
 
 /* Main column */
 .main {
-flex: 70%;
+  border-radius: 30px;
+  flex: 70%;
 background-color:#d8d8d8;
 color: rgb(0, 0, 0);
 padding: 20px;
