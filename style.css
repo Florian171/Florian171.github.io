@@ -149,6 +149,7 @@ a:hover {
 .row {  
   display: flex;
   flex-wrap: wrap;
+  padding: 20px;
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -156,19 +157,19 @@ a:hover {
 .side {
   flex: 30%;
   background-color: #323232;
-  border-radius: 30px;
+  border-top-left-radius: 30px;
   color: rgb(183, 183, 183);
-  padding: 20px;
+  padding: 60px;
 }
 
 
 /* Main column */
 .main {
-  border-radius: 30px;
+border-top-right-radius: 30px;
   flex: 70%;
 background-color:#d8d8d8;
 color: rgb(0, 0, 0);
-padding: 20px;
+padding: 40px;
 }
 
 .fakeimg {
@@ -208,6 +209,9 @@ padding: 20px;
   text-align: center;
   font-size: 6px;
   background: rgb(24, 24, 24);
+
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 
