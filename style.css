@@ -1,137 +1,233 @@
 * {
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  box-sizing: border-box;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
-  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
-  
+
 /* Header/logo Title */
 .header {
-  padding: 60px;
-  text-align: center;
-  background: #343434;
-  color: white;
+padding: 60px;
+text-align: center;
+background: #343434;
+color: white;
+}
+
+body {
+display: grid;
+place-items: center;
+min-height: 100vh;
+background: hsl(0 0% 20%);
 }
 
 .text-container {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
+img {max-width:75%;}
+
 .text-container h1{
-  margin: 0;
-  font-size:9vw;
-  color: rgba(255, 255, 255, 0.01);
-  background-image: url("img/bgText.jpg");
-  background-repeat: repeat;
-  -webkit-background-clip:text;
-  animation: animate 65s ease-in-out infinite;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 900;
+margin: 0;
+font-size:9vw;
+color: rgba(255, 255, 255, 0.01);
+background-image: url("img/violetGrid.jpg");
+background-repeat: repeat;
+-webkit-background-clip:text;
+animation: animate 10s ease-in-out infinite;
+text-align: center;
+text-transform: uppercase;
+font-weight: 900;
 }
 
 /* Style the top navigation bar */
 .navbar {
-    display: flex;
-    background-color: #333;
-  }
+  display: flex;
+  background-color: #333;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
   
-  /* Style the navigation bar links */
-  .navbar a {
-    color: white;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;
-  }
-  
-  /* Change color on hover */
-  .navbar a:hover {
-    background-color: #ddd;
-    color: black;
-  }
+}
+
+a {
+  text-decoration: none;
+  padding: 2px;
+  color: inherit;
+  background:
+    linear-gradient(
+      to right,
+      rgb(111, 0, 229),
+      rgb(111, 0, 229)
+    ),
+    linear-gradient(
+      to right,
+      rgb(115, 0, 255),
+      rgb(255, 0, 0),
+      rgb(111, 0, 229)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+
+.glow-on-hover {
+  width: 220px;
+  height: 50px;
+  text-align: center;
+  border: none;
+  outline: none;
+  padding: 10px;
+  color: #fff;
+  background: #111;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+
+.glow-on-hover:before {
+  content: '';
+  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000
+}
+
+
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
 
 .row {  
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /* Create two unequal columns that sits next to each other */
-  /* Sidebar/left column */
-  .side {
-    flex: 30%;
-    background-color: #f1f1f1;
-    padding: 20px;
-  }
+  display: flex;
+  flex-wrap: wrap;
+}
 
-  
-/* Main column */
-.main {
-  flex: 70%;
-  background-color: white;
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #323232;
+  color: rgb(183, 183, 183);
   padding: 20px;
 }
-  
+
+
+/* Main column */
+.main {
+flex: 70%;
+background-color:#d8d8d8;
+color: rgb(0, 0, 0);
+padding: 20px;
+}
+
 .fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
+background-color: #aaa;
+width: 100%;
+padding: 20px;
 }
 
 @keyframes typing{
-  0%{ width: 0ch} /*Text is hidden*/
-  30%{ width: 16ch;} /*The enitre header will be typed out*/
-  80%{ width: 16ch;} /*Text stays visible*/
-  90%{ width: 0ch;} /*Text is deleted*/
-  100%{ width: 0ch;} /*Text stays hidden*/
+0%{ width: 0ch} /*Text is hidden*/
+30%{ width: 16ch;} /*The enitre header will be typed out*/
+80%{ width: 16ch;} /*Text stays visible*/
+90%{ width: 0ch;} /*Text is deleted*/
+100%{ width: 0ch;} /*Text stays hidden*/
 }
-  /* Responsive layout - makes a one column-layout instead of a two-column layout */
-  @media (max-width: 100px) {
-    .flex-item-right, .flex-item-left {
-      flex: 100%;
-    }
+/* Responsive layout - makes a one column-layout instead of a two-column layout */
+@media (max-width: 100px) {
+  .flex-item-right, .flex-item-left {
+    flex: 100%;
   }
-  /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+}
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .row, .navbar {   
-    flex-direction: column;
-  }
+.row, .navbar {   
+  flex-direction: column;
+}
 }
 
-  .footer {
-    position:fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 9px;
-    background: rgb(255, 255, 255);
+.footer {
+  /*position:fixed; */
+  position:relative;
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 6px;
+  background: rgb(24, 24, 24);
 }
 
 
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Raleway', sans-serif;
-    background-color: rgb(61, 61, 61);
-  }
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgb(61, 61, 61);
+}
 
-  @keyframes animate {
-      0%, 100% {
-        background-position: left top;
-      }
-      25%{
-        background-position: right bottom;
-       }
-      50% {
-        background-position: left bottom;
-      }
-      75% {
-        background-position: right top;
-      }   
-  }
+@keyframes animate {
+    0%, 100% {
+      background-position: left top;
+    }
+    25%{
+      background-position: right bottom;
+     }
+    50% {
+      background-position: left bottom;
+    }
+    75% {
+      background-position: right top;
+    }   
+}
+
