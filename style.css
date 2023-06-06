@@ -14,23 +14,41 @@ background: #343434;
 color: white;
 }
 
+
+
 .p {
   text-align: justify;
 }
 
 body {
-display: grid;
-place-items: center;
-min-height: 100vh;
-background: hsl(0 0% 20%);
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  background-color: rgb(61, 61, 61);
 }
 
-.text-container {
-height: 100vh;
-width: 100vw;
-display: flex;
-justify-content: center;
-align-items: center;
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#3d3d3d, #000000);
+  clip-path: circle(22% at 30% 20%);
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#000000, #edc3ff);
+  clip-path: circle(20% at 70% 90%);
+  z-index: -1;
 }
 
 img {
@@ -87,18 +105,34 @@ input[type=checkbox]:checked ~ label > img {
   cursor: zoom-out;
 }
 
+.text-container {
+
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  }
+  
+
+
+
 .text-container h1{
-margin: 0;
-font-size:9vw;
-color: rgba(255, 255, 255, 0.01);
-background-image: url("img/violetGrid.jpg");
-background-repeat: repeat;
--webkit-background-clip:text;
-animation: animate 10s ease-in-out infinite;
-text-align: center;
-text-transform: uppercase;
-font-weight: 900;
+  content: "";
+  position: fixed;
+  font-size:9vw;
+  color: rgba(255, 255, 255, 0.01);
+  background-image: url("img/violetGrid.jpg");
+  background-repeat: repeat;
+  -webkit-background-clip:text;
+  animation: animate 10s ease-in-out infinite;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 900;
+  z-index: -1;
 }
+
 
 /* Style the top navigation bar */
 .navbar {
@@ -224,6 +258,7 @@ a:hover {
   flex-wrap: wrap;
   padding: 30px;
   box-shadow: rgba(61, 61, 61, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  
 }
 
 /* Create two unequal columns that sits next to each other */
@@ -292,12 +327,6 @@ box-shadow: 8px 8px 0px #000000;
 }
 
 
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Raleway', sans-serif;
-  background-color: rgb(61, 61, 61);
-}
 
 @keyframes animate {
     0%, 100% {
