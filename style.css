@@ -7,6 +7,9 @@
 }
 
 
+html {
+  height: -webkit-fill-available;
+}
 
 /* Header/logo Title */
 .header {
@@ -17,12 +20,15 @@ color: white;
 }
 
 
-
 .p {
   text-align: justify;
 }
 
 body {
+
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+
   margin: 0;
   padding: 0;
   font-family: 'Raleway', sans-serif;
@@ -117,7 +123,7 @@ input[type=checkbox]:checked ~ label > img {
 .text-container {
 
   height: 100vh;
-  width: 100vw;
+  width: 98vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,6 +270,8 @@ a:hover {
 }
 
 .row {  
+  width: 99vw;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
   padding:100px;
