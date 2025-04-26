@@ -24,7 +24,11 @@ jobs:
         with:
           source: ./
           destination: ./_site
+      - name: Debug artifact contents
+        run: ls -la ./_site
       - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
 
   deploy:
     environment:
